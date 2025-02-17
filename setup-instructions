@@ -1,0 +1,79 @@
+### Comprehensive Documentation
+
+To get started with the **Secure Authentication** project, follow these setup instructions:
+
+#### 1. **Install Dependencies**
+Run the following command to install all the required dependencies:
+
+```bash
+npm install
+```
+
+This will install the necessary packages listed in the `package.json` file.
+
+#### 2. **Configure Environment Variables**
+You need to create a `.env` file in the root directory of your project and add the following environment variables to configure the app correctly:
+
+```env
+PORT=3000
+DATABASE_URL=mongodb://localhost:27017/secure-authentication
+JWT_SECRET_KEY=you-cant-get-a-chance-to-decode-my-secret-key
+JWT_EXPIRES_IN='1h'
+JWT_COOKIE_EXPIRES_IN=1
+SENDGRID_API_KEY=use-your-send-grid-api-key
+FROM_ADRESS=use-your-sendgrid-from-address
+```
+
+- **PORT**: The port where your app will run (default: `3000`).
+- **DATABASE_URL**: Your MongoDB connection string.
+- **JWT_SECRET_KEY**: Secret key used to sign and verify JWT tokens.
+- **JWT_EXPIRES_IN**: Duration for which JWT tokens are valid.
+- **JWT_COOKIE_EXPIRES_IN**: Duration for the cookie to expire in days.
+- **SENDGRID_API_KEY**: Your SendGrid API key for sending emails.
+- **FROM_ADRESS**: The "from" email address you want to use for sending emails (e.g., `your-email@domain.com`).
+
+#### 3. **Running the Application**
+You can run the app in different modes using the following commands:
+
+- **Development Mode**:
+  This will start the application with `nodemon`, which automatically restarts the server on code changes.
+  ```bash
+  npm run dev
+  ```
+
+- **Production Mode**:
+  This will start the app in production mode.
+  ```bash
+  npm run prod
+  ```
+
+- **Test Mode**:
+  This will run your unit tests using Jest.
+  ```bash
+  npm run test
+  ```
+
+- **Watch Mode for Tests**:
+  This will watch for any test file changes and rerun the tests.
+  ```bash
+  npm run test:watch
+  ```
+
+#### 4. **Testing the Application**
+You can run tests to verify that your application works as expected. The tests are defined in the `test` folder.
+
+To run the tests:
+
+```bash
+npm run test
+```
+
+For continuous test execution on file changes:
+
+```bash
+npm run test:watch
+```
+
+---
+
+By following these steps, you can successfully set up the application, configure environment variables, and run it in different modes.
